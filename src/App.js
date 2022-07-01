@@ -16,6 +16,8 @@ import Userview from './userview';
 import Edit from './edit';
 import { UserProvider } from './UserContext';
 import { useState } from 'react';
+import Login from './Login';
+import Register from './Register';
 
 
 function App() {
@@ -33,6 +35,8 @@ function App() {
               <Topbar />
               <div class="container-fluid">
                 <Routes>
+                  <Route path="/login" element={<Login />} />
+                  <Route path="/register" element={<Register />} />
                   <Route path="/teachers" element={<Teachers />} />
                   <Route path="/createteachers" element={<Createteachers />} />
                   <Route path="/view-detail/:id" element={<Viewdetail />} />

@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from "react-router-dom"
+import { FaHouseUser, FaUserTie, FaUserGraduate } from "react-icons/fa";
 
 const Sidebar = () => {
     return (
@@ -17,12 +18,18 @@ const Sidebar = () => {
             <br></br>
             <br></br>
             <br></br>
+            <i ></i>
+
+            <li className="nav-item active">
+                <Link className="nav-link" to="./login">
+                    <FaHouseUser /> <span>Admin Login</span></Link>
+
+            </li>
 
             {/* <!-- Nav Item - Dashboard --> */}
             <li className="nav-item active">
                 <Link className="nav-link" to="./teachers">
-                    <i className="fas fa-fw fa-table"></i>
-                    <span>Teachers</span></Link>
+                    <FaUserTie /> <span>Teachers</span></Link>
             </li>
 
 
@@ -30,8 +37,7 @@ const Sidebar = () => {
             {/* <!-- Nav Item - Tables --> */}
             <li className="nav-item active">
                 <Link className="nav-link" to="./students">
-                    <i className="fas fa-fw fa-table"></i>
-                    <span>Students</span></Link>
+                    <FaUserGraduate /> <span>Students</span></Link>
             </li>
 
         </ul>
