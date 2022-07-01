@@ -21,7 +21,7 @@ const Sidebar = () => {
             <i ></i>
 
             <li className="nav-item active">
-                <Link className="nav-link" to="./login">
+                <Link className="nav-link" to="./">
                     <FaHouseUser /> <span>Admin Login</span></Link>
 
             </li>

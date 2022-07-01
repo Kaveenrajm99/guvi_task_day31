@@ -3,6 +3,7 @@ import { useFormik } from 'formik';
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
+
 function Register() {
     let navigate = useNavigate();
     let formik = useFormik({
@@ -80,6 +81,9 @@ function Register() {
                     </div>
                     <div className="col-lg-12 mt-3">
                         <input disabled={Object.keys(formik.errors).length !== 0} type={'submit'} className="btn btn-primary" />
+                        <button className="btn btn-primary m-1">Go Back</button>
+                        {navigate('/')}
+
                     </div>
                 </div>
             </form>

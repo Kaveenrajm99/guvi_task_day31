@@ -27,7 +27,7 @@ function Login() {
             try {
                 let loginData = await axios.post('https://neosmile-crud.herokuapp.com/login', values);
                 window.localStorage.setItem('myapptoken', loginData.data.token);
-                { loginData.data.message === "login sucessfull" ? navigate('/patients') : alert("Does not match") }
+                { loginData.data.message === "login sucessfull" ? navigate('/teachers') : alert("Does not match") }
             } catch (error) {
                 console.log(error);
                 alert('Something went wrong');
@@ -64,10 +64,9 @@ function Login() {
                         <div className="mr-5">
                             <input disabled={Object.keys(formik.errors).length !== 0}
                                 type={'submit'}
-                                className="btn btn-primary"
+                                className="btn btn-primary m-1"
                                 value={'Login'} />
-                        </div>
-                        <div>
+
                             <Link to={'/register'} className="btn btn-primary">SignUp</Link>
                         </div>
                     </div>
