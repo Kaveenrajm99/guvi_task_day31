@@ -18,6 +18,7 @@ import { UserProvider } from './UserContext';
 import { useState } from 'react';
 import Login from './Login';
 import Register from './Register';
+import Studentsdetail from './Studentsdetail';
 
 
 function App() {
@@ -45,6 +46,7 @@ function App() {
                   <Route path="/userscreate" element={<Createuser />} />
                   <Route path="/users-view/:id" element={<Userview />} />
                   <Route path="/users-edit/:id" element={<Edit />} />
+                  <Route path="/studentsdetail" element={<Studentsdetail />} />
                 </Routes>
               </div>
             </div>

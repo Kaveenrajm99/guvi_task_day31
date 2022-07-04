@@ -106,6 +106,7 @@ const Teachers = () => {
                                                     <Link to={`/view-detail/${data.id}`} type="button" className="btn btn-warning m-1">View</Link>
                                                     <Link to={`/edit-detail/${data.id}`} type="button" className="btn btn-primary m-1">Edit</Link>
                                                     <button type="button" className="btn btn-danger m-1" onClick={() => deleteUser(data.id)}>Delete</button>
+                                                    <Link to={"/studentsdetail"} type="button" className="btn btn-success m-1">Students</Link >
                                                 </div>
                                             </td>
                                         </tr>

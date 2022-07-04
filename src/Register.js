@@ -34,7 +34,7 @@ function Register() {
         onSubmit: async (values) => {
             try {
                 await axios.post('https://neosmile-crud.herokuapp.com/register', values);
-                navigate('/login');
+                { navigate('/') }
                 alert("Successfully Registerd & wait for Admin Confirmation")
             } catch (error) {
                 console.log(error);
@@ -81,8 +81,7 @@ function Register() {
                     </div>
                     <div className="col-lg-12 mt-3">
                         <input disabled={Object.keys(formik.errors).length !== 0} type={'submit'} className="btn btn-primary" />
-                        <button className="btn btn-primary m-1">Go Back</button>
-                        {navigate('/')}
+
 
                     </div>
                 </div>
